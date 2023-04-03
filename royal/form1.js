@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const propertySchema = new mongoose.Schema(
+const form1Schema = new mongoose.Schema(
   {
     order_ID: {
       type: Number,
