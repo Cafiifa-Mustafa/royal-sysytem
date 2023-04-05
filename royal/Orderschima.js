@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const form1Schema = new mongoose.Schema(
+const OrderSchema = new mongoose.Schema(
   {
     order_ID: {
       type: Number,
@@ -47,4 +47,4 @@ const form1Schema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-export default mongoose.model('form1', form1Schema);
+export default mongoose.model('Order', OrderSchema);
