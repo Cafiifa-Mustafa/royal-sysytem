@@ -1,8 +1,8 @@
-import User from './orderschima.js';
-export const updateUser = async (req, res) => {
+import order from './orderSchima.js';
+export const updateorder = async (req, res) => {
 const id = req.params.id;
 try{
-const updateUser = await User.findByIdAndUpdate(
+const updateorder = await order.findByIdAndUpdate(
     id,
     {
         $set: req.body,
@@ -12,7 +12,7 @@ const updateUser = await User.findByIdAndUpdate(
 res.status(200).json({
     success: true,
     message: 'successfully updated',
-    data: updatedUser,
+    data: updateorder,
 });
 } catch (err) {
     res.status(500).json({

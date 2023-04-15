@@ -1,8 +1,8 @@
-import user from './orderschima.js';
-export const deleteUser = async (req, res) => {
+import order from './orderSchima.js';
+export const deleteorder = async (req, res) => {
     const id = req.params.id;
     try{
-        await user.findByIdAndDelete(id);
+        await order.findByIdAndDelete(id);
         res.status(200).json({
             success: true,
             message: 'seccessfully deleted',

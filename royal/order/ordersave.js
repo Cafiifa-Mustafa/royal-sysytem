@@ -1,14 +1,14 @@
-import User from './orderschima.js';
-export const createUser = async (req, res) => {
-    const newUser = new User(req.body);
+import order from './orderSchima.js';
+export const createorder = async (req, res) => {
+    const neworder = new order(req.body);
 
     try{
-        const savedUser = await newUser.save();
+        const savedorder = await neworder.save();
 
         res.status(200).json({
             success: true,
             message: 'successfully created',
-            data: savedUser,
+            data: savedorder,
         })
     } catch (err) {
         res
